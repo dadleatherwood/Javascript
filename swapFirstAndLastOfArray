@@ -1,0 +1,15 @@
+function swapFirstAndLast (arr) {
+  var firstNum = [];
+  var lastNum = [];
+  if (arr.length <= 1) {
+    return arr
+  } else {
+  firstNum = arr.splice(0,arr[0]);
+  lastNum = arr.splice(arr.length-1,arr[arr.length-1]);
+  arr.unshift(parseInt(lastNum));
+  arr.push(parseInt(firstNum));
+  return arr;
+  }
+}
+
+swapFirstAndLast([1,2,3,4,5]);
